@@ -9,7 +9,8 @@ class dicom {
     
     function __construct($file) {
         if(file_exists($file)){
-             $this->file = $this->getDump(Execute(getCommand(BIN_DCMDUMP, ["-M", "+L", "+Qn", "+U8"], $file)));
+            // tut ne rabotaet 
+            $this->file = $this->getDump(Execute(getCommand(BIN_DCMDUMP, ["-M", "+L", "+Qn", "+U8"], $file)));
         } else {
         }
     }
